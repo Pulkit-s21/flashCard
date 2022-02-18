@@ -103,6 +103,16 @@ button:hover{
     .flashcard{
         margin: 10px auto;
     }
+    .flashcards{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        margin: auto;
+        margin-top: 10px;
+        padding: 0 10px;
+    }
 }
 
 @media (max-width: 480px){
@@ -113,7 +123,16 @@ button:hover{
     .create-box{
         width: 95%;
     }
-
+    .flashcards{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        margin: auto;
+        margin-top: 10px;
+        padding: 0 10px;
+    }
     .flashcard{
         width: 100%;
     }
