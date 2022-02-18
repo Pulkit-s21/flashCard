@@ -42,6 +42,7 @@ function addFlashCards() {
     }
 }
 
+// so that when the window loads a div is made for every flashcard in the localStorage
 contentArray.forEach(divMaker);
 
 function divMaker(text) {
@@ -55,23 +56,30 @@ function divMaker(text) {
     h2_question.setAttribute("style", "border-top: 1px solid red;padding: 15px; margin-top: 30px;text-transform:capitalize");
     h2_question.innerHTML = text.my_question;
     
-    answerBtn.setAttribute("style","border: 1px solid lightgrey; display:flex; margin: 1rem 2rem;")
-    answerBtn.innerHTML = `Show/Hide Answer`;
+    answerBtn.setAttribute("style","border: none; display:flex; margin: 1rem 0.5rem; background: #fff; color: red; font-size: 1.1rem")
+    answerBtn.innerHTML = `Show Answer`;
     
     h2_answer.setAttribute("style", "text-align: left;  color: black; display:none; margin: 1rem; text-transform: capitalize");
     h2_answer.innerHTML = text.my_answer;
 
+    // they append in this order
     div.appendChild(h2_question);
     div.appendChild(answerBtn);
     div.appendChild(h2_answer);
 
     answerBtn.addEventListener("click", () => {
-        if (h2_answer.style.display == "none")
-            h2_answer.style.display = "block";
-         else
+        if (h2_answer.style.display == "none") {
+            h2_answer.style.display = "block"
+            answerBtn.textContent = "Hide Answer";
+            answerBtn.style.color = "blue";
+        } else {
             h2_answer.style.display = "none"
+            answerBtn.textContent = "Show Answer";
+            answerBtn.style.color = "red";
+        }
     });
 
+    // appending the div to the container to display
     flashCards.appendChild(div);
 }
 
