@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    background-color: whitesmoke;
+}
+
+header{
+    background-color: white;
+}
+
+button{
+    padding: 0.55rem;
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+    margin-right: 0.25rem;
+}
+
+button:hover{
+    background: rgba(0,0,0,0.1);
+}
+
+.container{
+    width: 95%;
+    margin: auto;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin: auto;
+    width: 100%;
+    background-color: white;
+}
+
+.nav button{
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.create-box{
+    margin: auto;
+    padding: 2rem;
+    width: 400px;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+}
+
+.create-box textarea{
+    width: 100%;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: 1px solid lightgrey;
+}
+
+.create-box button{
+    width: fit-content;
+}
+
+.flashcards{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.flashcard{
+    width: 20rem;
+    height: auto;
+    background-color: #fff;
+    color: #000;
+    word-wrap: break-word;
+    margin: 0 10px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+.flashcard h2{
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px){
+    .flashcard{
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px){
+    .nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    .create-box{
+        width: 95%;
+    }
+
+    .flashcard{
+        width: 100%;
+    }
+}
