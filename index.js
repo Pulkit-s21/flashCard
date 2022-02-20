@@ -1,4 +1,4 @@
-// selecting items
+// select items
 const flashCards = document.querySelector(".flashcards");
 const createBox = document.querySelector(".create-box");
 const question = document.getElementById("question");
@@ -9,6 +9,7 @@ const saveBtn = document.querySelector(".saveBtn");
 const closeBtn = document.querySelector(".closeBtn");
 let contentArray = localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : [];
 
+// event listener
 newCard.addEventListener("click", showCreateBox);
 delCard.addEventListener("click", delFlashCards);
 saveBtn.addEventListener("click", addFlashCards);
@@ -29,7 +30,6 @@ function addFlashCards() {
     if (question.value == '' || answer.value == '') {
         alert("Please enter values");
     } else {
-
         var flashCard_info = {
             'my_question': question.value,
             'my_answer': answer.value
@@ -37,6 +37,7 @@ function addFlashCards() {
 
         contentArray.push(flashCard_info);
         localStorage.setItem("items", JSON.stringify(contentArray));
+        // this means run the func divMaker for the last index in contentArray which means the last index...the latest card user inputs
         divMaker(contentArray[contentArray.length - 1]);
         setBackToDefault();
     }

@@ -34,6 +34,7 @@ button:hover{
 
 .container{
     width: 95%;
+    /* to center the container horizontally */
     margin: auto;
 }
 
@@ -52,6 +53,7 @@ button:hover{
 }
 
 .create-box{
+    /* to center the create box horizontally */
     margin: auto;
     padding: 2rem;
     width: 400px;
@@ -63,7 +65,7 @@ button:hover{
 }
 
 .create-box textarea{
-    width: 100%;
+    width: 100%; /* imp */
     border-radius: 8px;
     font-family: inherit;
     font-size: 1.2rem;
@@ -106,14 +108,7 @@ button:hover{
         width: 55%;
     }
     .flashcards{
-        display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 100%;
-        margin: auto;
-        margin-top: 10px;
-        padding: 0 10px;
     }
 }
 
@@ -126,14 +121,7 @@ button:hover{
         width: 95%;
     }
     .flashcards{
-        display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 100%;
-        margin: auto;
-        margin-top: 10px;
-        padding: 0 10px;
     }
     .flashcard{
         width: 95%;
